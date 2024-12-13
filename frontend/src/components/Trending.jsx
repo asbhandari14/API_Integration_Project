@@ -11,7 +11,7 @@ const Trending = () => {
 
     const getTrendingVideos=async()=>{
         try {
-            const response = await axios("http://localhost:8000/api/youtube_data/videos/trending");
+            const response = await axios("https://api-integration-project-backend.onrender.com/api/youtube_data/videos/trending");
 
             console.log(response);
             if(response.data.success){

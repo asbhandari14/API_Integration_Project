@@ -26,7 +26,7 @@ const VideoComments = () => {
         if(videoId == null) alert("This is the not the correct video url link")
         try {
 
-            const response = await axios.get(`http://localhost:8000/api/youtube_data/videos/${videoId}/comments`, { withCredentials: true, headers: { "Content-Type": "application/json" } });
+            const response = await axios.get(`https://api-integration-project-backend.onrender.com/api/youtube_data/videos/${videoId}/comments`, { withCredentials: true, headers: { "Content-Type": "application/json" } });
 
             console.log(response)
 

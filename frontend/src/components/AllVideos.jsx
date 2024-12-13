@@ -24,7 +24,7 @@ const AllPlaylist = () => {
         let playlistId = extractPlaylistId(query);
         if(playlistId == null) alert("Enter a valid youtube playlist link");
         try {
-            const response = await axios.get(`http://localhost:8000/api/youtube_data/playlist/${playlistId}/items`, { withCredentials: true, headers: { "Content-Type": "application/json" } });
+            const response = await axios.get(`https://api-integration-project-backend.onrender.com/api/youtube_data/playlist/${playlistId}/items`, { withCredentials: true, headers: { "Content-Type": "application/json" } });
 
             if (response.data.success) {
                 setApiData([...response.data.items]);
